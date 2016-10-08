@@ -1,0 +1,10 @@
+[
+  {
+    "id": "hiera-eyaml",
+    "caption": "Hiera eyaml",
+    "children": [
+      { "caption" : "Encrypt", "command" : "eyaml_encrypt" },
+      { "caption" : "Decrypt", "command" : "eyaml_decrypt" },
+    ]
+  }
+]

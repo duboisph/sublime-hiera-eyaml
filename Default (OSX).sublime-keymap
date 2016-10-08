@@ -1,0 +1,4 @@
+[
+  { "keys": ["ctrl+alt+e"], "command": "eyaml_encrypt" },
+  { "keys": ["ctrl+alt+d"], "command": "eyaml_decrypt" },
+]
