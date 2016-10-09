@@ -1,4 +1,4 @@
 [
-  { "keys": ["ctrl+alt+n"], "command": "eyaml_encrypt" },
-  { "keys": ["ctrl+alt+d"], "command": "eyaml_decrypt" }
+  { "keys": ["ctrl+shift+e"], "command": "eyaml_encrypt" },
+  { "keys": ["ctrl+shift+d"], "command": "eyaml_decrypt" }
 ]
