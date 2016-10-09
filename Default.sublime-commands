@@ -1,0 +1,24 @@
+[
+  {
+    "caption": "Hiera-eyaml: Encrypt Selection",
+    "command": "eyaml_encrypt"
+  },
+  {
+    "caption": "Hiera-eyaml: Decrypt Selection",
+    "command": "eyaml_decrypt"
+  },
+  {
+    "caption": "Preferences: Hiera-eyaml Settings - User",
+    "command": "open_file",
+    "args": {
+      "file": "${packages}/User/hiera-eyaml.sublime-settings"
+    }
+  },
+  {
+    "caption": "Preferences: Hiera-eyaml Settings - Default",
+    "command": "open_file",
+    "args": {
+      "file": "${packages}/hiera-eyaml/hiera-eyaml.sublime-settings"
+    }
+  }
+]

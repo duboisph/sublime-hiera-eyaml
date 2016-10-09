@@ -1,0 +1,73 @@
+[
+  {
+    "id": "tools",
+    "children": [
+      {
+        "id": "hiera-eyaml",
+        "caption": "Hiera-eyaml",
+        "children": [
+          {
+            "caption": "Encrypt Selection",
+            "command": "eyaml_encrypt"
+          },
+          {
+            "caption": "Decrypt Selection",
+            "command": "eyaml_decrypt"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "caption": "Preferences",
+    "id": "preferences",
+    "mnemonic": "n",
+    "children": [
+      {
+        "caption": "Package Settings",
+        "id": "package-settings",
+        "mnemonic": "P",
+        "children": [
+          {
+            "caption": "Hiera-eyaml",
+            "children": [
+              {
+                "caption": "Settings – Default",
+                "command": "open_file",
+                "args": {
+                  "file": "${packages}/hiera-eyaml/hiera-eyaml.sublime-settings"
+                }
+              },
+              {
+                "caption": "Settings – User",
+                "command": "open_file",
+                "args": {
+                  "file": "${packages}/User/hiera-eyaml.sublime-settings"
+                }
+              },
+              {
+                "caption": "-"
+              },
+              {
+                "caption": "Key Bindings – Default",
+                "command": "open_file",
+                "args": {
+                  "file": "${packages}/hiera-eyaml/Default (OSX).sublime-keymap",
+                  "platform": "OSX"
+                }
+              },
+              {
+                "caption": "Key Bindings – User",
+                "command": "open_file",
+                "args": {
+                  "file": "${packages}/User/Default (OSX).sublime-keymap",
+                  "platform": "OSX"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

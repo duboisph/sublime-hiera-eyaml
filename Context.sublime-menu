@@ -1,10 +1,16 @@
 [
   {
     "id": "hiera-eyaml",
-    "caption": "Hiera eyaml",
+    "caption": "Hiera-eyaml",
     "children": [
-      { "caption" : "Encrypt", "command" : "eyaml_encrypt" },
-      { "caption" : "Decrypt", "command" : "eyaml_decrypt" },
+      {
+        "caption": "Encrypt Selection",
+        "command": "eyaml_encrypt"
+      },
+      {
+        "caption": "Decrypt Selection",
+        "command": "eyaml_decrypt"
+      }
     ]
   }
 ]
