@@ -5,12 +5,6 @@ import sublime_plugin
 import subprocess
 import sys
 
-# Some test strings
-# hello world
-# hello world && touch ~/foo
-# $ac\/ii'sd'\:^
-# foo  bar
-
 
 def plugin_loaded():
   global s
