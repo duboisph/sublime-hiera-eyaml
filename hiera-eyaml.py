@@ -11,8 +11,10 @@ import sys
 # $ac\/ii'sd'\:^
 # foo  bar
 
-# TODO: Need to make this autodetect and/or a setting
-eyamlbin = '/Users/duboisph/.rbenv/shims/eyaml'
+
+def plugin_loaded():
+  global s
+  s = sublime.load_settings("hiera-eyaml.sublime-settings")
 
 
 def runCmd(args):
@@ -32,10 +34,12 @@ def runCmd(args):
 
 
 def encrypt(cleartext):
+  eyamlbin = s.get('hiera_eyaml_bin', 'eyaml')
   return runCmd([eyamlbin, 'encrypt', '-q', '-o', 'string', '-s', cleartext])
 
 
 def decrypt(ciphertext):
+  eyamlbin = s.get('hiera_eyaml_bin', 'eyaml')
   return runCmd([eyamlbin, 'decrypt', '-q', '-s', ciphertext])
 
 

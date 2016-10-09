@@ -1,0 +1,10 @@
+{
+  // Sets the full path to the hiera-eyaml gem binary
+  //  Sublime Text has its PATH set by launchctl on macOS, unless it is launched
+  //  via the shell (with the subl command). This means that usually ST will not
+  //  find the eyaml binary in your PATH. Use this setting to point the plugin
+  //  to the correct binary (eg. /Users/<username>/.rbenv/shims/eyaml).
+  //  Another option is to use the "Fix Mac Path" plugin
+  //  https://github.com/int3h/SublimeFixMacPath/blob/master/FixPath.py
+  "hiera_eyaml_bin": "eyaml"
+}
