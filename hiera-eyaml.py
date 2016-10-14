@@ -11,12 +11,13 @@ def plugin_loaded():
     s = sublime.load_settings("hiera-eyaml.sublime-settings")
 
 
-def runCmd(args):
+def runCmd(args, stdin_string):
     try:
         proc = subprocess.Popen(args,
                                 stdout=subprocess.PIPE,
+                                stdin=subprocess.PIPE,
                                 stderr=subprocess.PIPE)
-        out, err = proc.communicate()
+        out, err = proc.communicate(input=stdin_string.encode('utf-8'))
         if proc.returncode == 0:
             return out.decode('utf-8').strip(os.linesep)
         else:
@@ -31,12 +32,12 @@ def runCmd(args):
 
 def encrypt(cleartext):
     eyamlbin = s.get('hiera_eyaml_bin', 'eyaml')
-    return runCmd([eyamlbin, 'encrypt', '-q', '-o', 'string', '-s', cleartext])
+    return runCmd([eyamlbin, 'encrypt', '-q', '-o', 'string', '--stdin'], cleartext)
 
 
 def decrypt(ciphertext):
     eyamlbin = s.get('hiera_eyaml_bin', 'eyaml')
-    return runCmd([eyamlbin, 'decrypt', '-q', '-s', ciphertext])
+    return runCmd([eyamlbin, 'decrypt', '-q', '--stdin'], ciphertext)
 
 
 class EyamlEncryptCommand(sublime_plugin.TextCommand):
