@@ -1,3 +1,5 @@
+**!! Deprecation notice !!** This code has not been maintained while I've migrated to VSCode years ago. This repo is now archived. I'm open to someone else taking over this project.
+
 # Hiera-eyaml for Sublime Text
 
 Package to use [hiera-eyaml](https://github.com/TomPoulton/hiera-eyaml) encryption/decryption in Sublime Text.
